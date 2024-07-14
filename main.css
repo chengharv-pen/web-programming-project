@@ -1,0 +1,56 @@
+body {
+    background-color: wheat;
+}
+
+.content {
+    padding: 20px;
+}
+
+.side-menu {
+    background-color: #9affe6;
+    padding: 20px;
+    height: 100vh;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li a {
+    display: block;
+    color: black;
+    text-align: left;
+    padding: 16px;
+    text-decoration: none;
+}
+
+li a.active {
+    background-color: #04AA6D;
+    color: white;
+}
+
+li a:hover:not(.active) {
+    background-color: #555;
+    color: white;
+}
+
+.active {
+    background-color: #00e1ff;
+}
+
+/* to override the existing css for "a" tag */
+#side-menu .active a {
+    color: #fff;
+}
+
+header {
+    background-position: center;
+    background-size: auto;
+    background-image: url("images/file.png");
+    color: whitesmoke;
+    text-decoration-line: underline overline;
+    text-underline-offset: 15px;
+}
