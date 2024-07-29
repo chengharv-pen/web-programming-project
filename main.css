@@ -1,56 +1,107 @@
-body {
+body,
+html {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
     background-color: wheat;
 }
 
-.content {
-    padding: 20px;
+header,
+footer {
+    flex: 0.1;
+}
+
+header {
+    padding-left: 20px;
+    background-position: center;
+    background-size: auto;
+    background-image: url("images/file.png");
+    color: whitesmoke;
+}
+
+.header-nav-link,
+.footer-nav-link {
+    text-decoration: none;
+}
+
+.footer-nav-link {
+    color: white;
+}
+
+.content-area {
+    display: flex;
+    flex: 1;
 }
 
 .side-menu {
     background-color: #9affe6;
     padding: 20px;
-    height: 100vh;
-}
-
-ul {
-    list-style-type: none;
+    flex: 0 0 15%;
     margin: 0;
-    padding: 0;
-    overflow: hidden;
 }
 
-li a {
+.content {
+    flex: 1;
+    overflow: hidden;
+    padding: 20px;
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.side-menu .nav-link {
+    color: black;
+}
+
+.nav-item {
+    list-style-type: none;
+}
+
+.nav-item .nav-link {
     display: block;
     color: black;
     text-align: left;
-    padding: 16px;
-    text-decoration: none;
+    padding: 10px;
 }
 
-li a.active {
-    background-color: #04AA6D;
-    color: white;
-}
-
-li a:hover:not(.active) {
+.nav-item .nav-link:hover:not(.active) {
     background-color: #555;
     color: white;
 }
 
-.active {
-    background-color: #00e1ff;
+.nav-link.active {
+    background-color: rgb(19, 228, 19);
+    color: white;
 }
 
-/* to override the existing css for "a" tag */
-#side-menu .active a {
-    color: #fff;
+/* Mobile/Tablet Styles */
+@media only screen and (max-width: 768px) {
+    .content-area {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
-header {
-    background-position: center;
-    background-size: auto;
-    background-image: url("images/file.png");
-    color: whitesmoke;
-    text-decoration-line: underline overline;
-    text-underline-offset: 15px;
+/* Laptops */
+@media only screen and (max-width: 1200px) {
+    .content-area {
+        height: auto;
+    }
+
+    .side-menu {
+        width: 100%;
+        height: 600px;
+    }
+
+    header,
+    footer {
+        height: 100px;
+    }
+
+    iframe {
+        height: 400px;
+    }
 }
