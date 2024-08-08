@@ -1,0 +1,41 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h2 {
+    font-size: 50px;
+}
+
+.pet-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    width: 100%;
+}
+
+.pet {
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
+    padding: 20px;
+    margin: 5px;
+    text-align: center;
+    max-width: 50%;
+    box-sizing: border-box;
+    word-wrap: break-word;
+    overflow: hidden;
+}
+
+.pet h3 {
+    font-size: 30px;
+}
+
+.pet-image {
+    width: 50%;
+    height: 50%;
+}

@@ -1,0 +1,9 @@
+1:wwww:Yoshi:corgi-4415649_1280.jpg:Dog:Corgi:5:Male:Yes:No:Yes:Yoshi is a playful and friendly corgi who loves to go on long walks and play fetch. He has a very loving personality and enjoys being around people. He would make a great addition to any family looking for a loyal and affectionate pet.:Andy Chan:chan12345@gmail.com
+2:wwww:Molly:dog-4372036_1280.jpg:Dog:Golden Retriever:3:Male:No:Yes:Yes:Molly is a delightful golden retriever with a zest for life. He's incredibly friendly and loves to be the center of attention. Whether it's playing fetch in the backyard or curling up on the couch, Molly is always ready to join in. He's well-behaved and responds well to commands, making him a joy to have around the house. Molly's cheerful demeanor and loving nature make him an excellent companion for families and individuals alike.:John Doe:johndoe@example.com
+3:wwww:Luna:Samoyed850.jpg:Dog:Samoyed:5:Female:Yes:Yes:Yes:Luna is an energetic and affectionate samoyed who loves to play and explore. He enjoys spending time with his human companions and is always up for a game of tug-of-war or a walk in the park. Luna is well-trained and gets along well with children, making him a perfect fit for a loving home. His bright eyes and wagging tail are sure to bring joy and happiness to any family.:Jane Doe:janedoe@example.com
+4:wwww:::Cat:test:senior:Male:Yes:Yes:Yes:test:test:test@gmail.com
+5:wwww:wwwww:dogs.gif:Dog:test:69.69:Male:Yes:Yes:Yes:test:test:test@gmail.com
+6:wwww:::Cat:w:1234:any:No:Yes:Yes:wwwwwww:wwwww:wwwwww@gmail.com
+7:wwww::huh.png:Cat:test:1234:any:No:Yes:Yes:test:test:test@gmail.com
+8:wwww::1723074860896-huh.png:Cat:test2:12345:any:Yes:Yes:Yes:test2:test2:test2@gmail.com
+9:wwww:::Cat:what:doesn't matter:any:No:Yes:No:what:what:what@gmail.com
