@@ -1,3 +1,3 @@
-I used the Live Server extension in VSCode to run this project.
+As of 08/08/2024, the only missing thing to implement would be filtering by breed/compatibility
 
-Right click index.html, then click "Open with Live Server".
+To run the project, please use a terminal and type "node server.js". The port is 3000, so it will run on http://localhost:3000/
