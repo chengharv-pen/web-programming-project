@@ -23,9 +23,9 @@ document.addEventListener('DOMContentLoaded', function () {
                         <p>Breed of pet: <span class="breed">${parts[5]}</span></p>
                         <p>Age of animal: <span class="age">${parts[6]}</span></p>
                         <p>Gender: <span class="gender">${parts[7]}</span></p>
-                        <p>Gets along with other dogs: <span class="alongDog">${parts[8]}</span></p>
-                        <p>Gets along with other cats: <span class="alongCat">${parts[9]}</span></p>
-                        <p>Suitable for a family with small children: <span class="suitableFamily">${parts[10]}</span></p>
+                        <p>Gets along with other dogs: <span class="compatibility">${parts[8]}</span></p>
+                        <p>Gets along with other cats: <span class="compatibility">${parts[9]}</span></p>
+                        <p>Suitable for a family with small children: <span class="compatibility">${parts[10]}</span></p>
                         <p>Comment area:</p>
                         <blockquote class="comment">${parts[11]}</blockquote>
                         <p>Current owner's name: <span class="name">${parts[12]}</span></p>
@@ -66,7 +66,9 @@ document.addEventListener('DOMContentLoaded', function () {
         return {
             animalType: params.get('animalType'),
             age: convertAge(params.get('age')),
-            gender: params.get('gender')
+            gender: params.get('gender'),
+            breed: decodeURIComponent(params.get('breed')),
+            compatibility: decodeURIComponent(params.get('compatibility'))
         };
     }
 
@@ -78,21 +80,51 @@ document.addEventListener('DOMContentLoaded', function () {
             const petAnimalType = pet.querySelector('.animalType').textContent.trim();
             const petAge = pet.querySelector('.age').textContent.trim();
             const petGender = pet.querySelector('.gender').textContent.trim();
+            const petBreed = pet.querySelector('.breed').textContent.trim();
 
             let matches = true;
 
-            // This filters by animal type
+            // Filter 1: This filters by animal type
             if (params.animalType && petAnimalType !== params.animalType) {
                 matches = false;
             }
 
-            // Here, I have decided to display all pets that are under or equal to the upper bound of the preferred age.
+            // Filter 2: Here, I have decided to display all pets that are under or equal to the upper bound of the preferred age.
             if (params.age && petAge >= params.age) {
                 matches = false;
             }
 
-            // This filters by gender
+            // Filter 3: This filters by gender
             if (params.gender && petGender !== params.gender && params.gender !== 'any') {
+                matches = false;
+            }
+
+            // Filter 4: This filters by breed
+            console.log('Breed: ' + params.breed + ' ' + petBreed);
+            if (params.breed && petBreed !== params.breed && params.breed.toLowerCase() !== "doesn't matter") {
+                matches = false;
+            }
+
+            // Filter 5: This filters by compatibility, in this order: dogs, cats, small children
+            // Get all elements with the class '.compatibility'
+            const petCompatibilityNodes = pet.querySelectorAll('.compatibility');
+
+            // Convert the NodeList to an array and map over it to get the trimmed text content
+            const petCompatibility = Array.from(petCompatibilityNodes).map(node => {
+                if (node) {
+                    return node.textContent.trim();
+                } else {
+                    return undefined
+                }
+            });
+            console.log(petCompatibility);
+
+            const criteria = ['dogs', 'cats', 'small children'];
+            const index = criteria.indexOf(params.compatibility);
+            console.log(index + ' ' + params.compatibility);
+            if (index === -1 && params.compatibility.toLowerCase() !== "doesn't matter") {
+                matches = false;
+            } else if (params.compatibility && petCompatibility[index] === 'No' && params.compatibility.toLowerCase() !== "doesn't matter") {
                 matches = false;
             }
 

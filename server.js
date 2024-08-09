@@ -56,7 +56,11 @@ app.post('/check-session', (req, res) => {
 // Whenever we post the form for find.html, we redirect to browse.html with the form's important parameters in the URL
 app.post('/find-cat-or-dog-submit', (req, res) => {
     console.log('Find - Got request body:', req.body);
-    res.redirect('/content/browse.html?animalType=' + req.body.animalType + '&age=' + req.body.age + '&gender=' + req.body.gender);
+    res.redirect('/content/browse.html?animalType=' + req.body.animalType +
+        '&age=' + req.body.age +
+        '&gender=' + req.body.gender +
+        '&breed=' + req.body.breed +
+        '&compatibility=' + req.body.compatibility);
 });
 
 // POST request to check if a username is already taken.
@@ -163,7 +167,7 @@ app.post('/give-away-submit', upload.single('file'), (req, res) => {
 });
 
 app.listen(3000, () => {
-    console.log('Listening on port 3000. http://localhost:3000/');
+    console.log('Listening on port 3000.');
 });
 
 // Common function to format request body

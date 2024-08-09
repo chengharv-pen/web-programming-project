@@ -1,0 +1,17 @@
+header-bg.png >>> https://www.shutterstock.com/image-vector/paw-vector-foot-trail-print-dog-1871198290
+dogs.gif >>> https://giphy.com/gifs/puppies-qzJPSZ0mClSUw
+corgi-4415649_1280.jpg >>> https://pixabay.com/photos/corgi-dog-pet-canine-rain-animal-4415649/
+dog-4372036_1280.jpg >>> https://pixabay.com/photos/dog-puppy-golden-retriever-breed-4372036/
+Samoyed850.jpg >>> https://www.petinsurance.com/healthzone/pet-breeds/dog-breeds/samoyed/
+
+dog/cat images to test image upload functionnality:
+https://www.pexels.com/photo/portrait-photo-of-an-adult-black-pug-1851164/
+https://www.pexels.com/photo/portrait-of-shiba-inu-dog-4587979/
+https://www.pexels.com/photo/selective-focus-photography-of-orange-tabby-cat-1170986/
+https://www.pexels.com/photo/beige-cat-with-gold-colored-crown-1314550/
+https://www.pexels.com/photo/brown-tabby-cat-2071882/
+https://www.pexels.com/photo/gray-and-white-maine-coon-cat-beside-brown-wicker-basket-208773/
+https://www.pexels.com/photo/photo-of-white-short-fur-cat-2942330/
+
+dummy image to test image upload functionnality:
+1723074860896-huh.png >>> https://knowyourmeme.com/photos/2620664-shocked-turtle-huh
